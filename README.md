@@ -6,7 +6,15 @@ Assignment Re=quirements
 # All the News That's Fit to Scrape
 
 ### Overview
-
+This is a full stack application which allows users to leave comments on the articles from Psychology today.
+Technologies used include:
+- Express.
+- Mongoose.
+- Body Parser.
+- Cheerio.
+- Request.
+- Axios.
+- 
 In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
 
 ### Before You Begin
