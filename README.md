@@ -1,7 +1,5 @@
 # Scraper
 
-
-
 Assignment Requirements
 # All the News That's Fit to Scrape
 ### Overview
