@@ -1,5 +1,6 @@
 // Require dependencies for app to work, dependencies need to be installed
 const express = require("express");
+exphbs= require("express-handlebars");
 var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
@@ -7,6 +8,8 @@ var cheerio = require("cheerio");
 // Initialize Express
 var app = express();
 var PORT = process.env.PORT || 3000;
+// require routes
+routes =require("./controllers")
 // database configuration
 
 // connect mongojs to the database variable ceated and include a method to check and log errors if there are issues with mongodb
