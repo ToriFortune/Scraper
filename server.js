@@ -1,19 +1,29 @@
 
 // dependencies
 const express = require("express");
-const mongoose = require("mongoose");
-const exphbs = require("express-handlebars");
-
-// Set up the port to be either the host's designated port or 3002
-const PORT = process.env.PORT || 3002;
-
-// Initiate express
-const app = express();
+exphbs= require("express-handlebars");
+var mongoose = require("mongoose");
+bodyParser = require("body-parser");
+var axios = require("axios");
+var cheerio = require("cheerio");
+var path = require("path");
+// Initialize Express
+var app = express();
+var PORT = process.env.PORT || 3000;
 // require routes
-const routes = require("./routes");
+// routes = require("./controllers/api");
 
-// Parse as json
+
+var app = express();
+
+// database configuration
+
+// connect mongojs to the database variable ceated and include a method to check and log errors if there are issues with mongodb
+var db = require("./models");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
 
 // Make the public folder static 
@@ -38,8 +48,6 @@ mongoose.connect(MONGODB_URI);
 app.listen(PORT, function () {
   console.log("App running on port " + PORT + "!");
 });
-
-
 
 
 
