@@ -2,7 +2,7 @@
 const db = require('../models');
 
 // scrape function
-const scrape = require('../scripts/scrape');
+const scrape = require('../scripts/scrapes');
 
 module.exports = {
     scrapeHeader: function(req, res) {
