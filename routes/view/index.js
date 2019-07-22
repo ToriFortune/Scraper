@@ -22,13 +22,13 @@ router.get("/news/*", function(req, res) {
 });
 
 // This route renders the saved handlebars page
-router.get("/saved", function(req, res) {
+router.get("/articles", function(req, res) {
   console.log(req);
   db.Header.find({ saved: true })
     .sort({ date: -1 })
     .then(function(dbArticles) {
       console.log(dbArticles);
-      res.render("saved", { articles: dbArticles, header:req.header });
+      res.render("articles", { articles: dbArticles, header:req.header });
     });
 });
 
