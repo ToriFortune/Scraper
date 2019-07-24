@@ -4,9 +4,9 @@ const express = require("express");
 const exphbs= require("express-handlebars");
 const mongoose = require("mongoose");
 bodyParser = require("body-parser");
-var axios = require("axios");
-var cheerio = require("cheerio");
-var path = require("path");
+// var axios = require("axios");
+// var cheerio = require("cheerio");
+// var path = require("path");
 const routes = require ("./routes")
 // Initialize Express
 var app = express();
